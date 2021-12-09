@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="icon" type="image/gif" href="360.png">
+    <script src="https://kit.fontawesome.com/3dfb1555b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="front_page.css">
+    <title>Area Search</title>
+</head>
+
+<body>
+    <!-- body id="main" removed -->
+
+    <!-- Header -->
+    <header id="body-header">
+        <nav>
+
+            <ul class="horizontal-list text-center nav-menu">
+                <li>
+                    <a href="front_page.html"> Home </a>
+                </li>
+                <li>
+                    <a href="#about"> About </a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+                <!-- <li>
+                    <a href="signin.html"> Log In</a>
+                </li>
+                <li>
+                    <a href="signup.html"> Sign Up</a>
+                </li> -->
+            </ul>
+
+        </nav>
+
+
+        <div id="name-social-container">
+            <div class="text-center">
+                <a href="front_page.html"><h1 id="my-name">360 Resources</h1></a>
+                <h2 id="subtext">Find videos, notes, links and more! </h2>
+            </div>
+            <div>
+                <ul class="horizontal-list text-center social-icons">
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" title="Faceboook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.quora.com/" target="_blank" title="Quora">
+                            <i class="fab fa-quora"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+
+
+    <!-- Radius Form -->
+    <!-- <p id="gps">qwert</p> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 main1 text-center">
+                <form  method="POST">
+                    <h2>Radius(in meters)</h2>
+                    <input type="text" class="box" id="radius" name="radius" placeholder="Default Radius : 3000"/>
+                    <br>
+                    <button type="submit" formaction="/search" >Shopping Mall</button>
+                    <button type="submit" formaction="/search1" >Plumber</button>
+                    <button type="submit" formaction="/search2" >Electric Consultant</button>
+                    <button type="submit" formaction="/search3" >Restaurant</button>
+                    <button type="submit" formaction="/search4" >Coaching Center</button>
+                    <button type="submit" formaction="/search5" >Food Stall</button>
+                    <button type="submit" formaction="/search6" >Cobbler</button>
+                    <button type="submit" formaction="/search7" >Cinema</button>
+                    <button type="submit" formaction="/search8" >Tailor</button>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+    <script>
+      if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position=>{
+              const lat=position.coords.latitude; 
+              const lon= position.coords.longitude;
+              document.getElementById('latitude').textContent=lat;
+              document.getElementById('longitude').textContent=lon;
+              const data={lat,lon};
+              const options={
+                method:'POST',
+                headers:{
+                  'Content-Type':'application/json'
+                },
+                body:JSON.stringify(data)
+              }
+              fetch('/api',options);
+            });
+          } else { 
+            console.log("Geolocation is not supported by this browser.");}
+        </script>
+        <div id="hidden-div">
+            <br><br><br>
+            <p>Your Current Coordinates:-</p>
+            <p>latitude: <span id="latitude"</span></p>
+            <p>longitude:<span id="longitude"</span></p>
+        </div>
+    
+
+
+
+
+    <!-- Contact Section -->
+        
+    <section id="contact">
+            
+        <h1 class="section-heading text-center">
+            <i class="far fa-address-card"></i>
+            Contact
+        </h1>
+        
+        <div id="cont-div">
+            
+            <div id="div-with-form">
+                <form action="/suggest" method="POST">
+                    <input type="text" id="form-name" placeholder="Your name">
+                    <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+                    <textarea name="message" id="message" placeholder="Suggestion"></textarea>
+                    <input type="submit" value="SEND MESSAGE" id="submit"/>
+                </form>
+            </div>
+            
+            <div id="contact-info">
+                <h6>Get in touch</h6>
+                <p>
+                    We, at 360 resources, are determined to provide the best service possible and you can help us achieve our goal. Your suggestions/feedback will help us improve our services. So help us get better by providing feedback by filling the form below.
+                </p>
+
+                <h6>Our Address</h6>
+                <p>
+                    <a href="https://www.google.com/maps/place/JAYPEE+INSTITUTE+OF+INFORMATION+TECHNOLOGY/@28.6297291,77.3698669,17z/data=!3m1!4b1!4m5!3m4!1s0x390ce551491b3ce7:0x7335d9fcfd4d9db0!8m2!3d28.6297291!4d77.3720556" target="_blank" title="JIIT Noida">
+                        <i class="fas fa-map-marker-alt"></i>&nbsp;
+                        Noida, India <br><br>
+                    </a>
+                    <!-- <i class="fas fa-map-marker-alt"></i> 
+                        Delhi, India <br><br> -->
+                    <!-- <i class="fas fa-mobile-alt"></i>&nbsp;
+                        9999999999 <br><br> -->
+                    <i class="far fa-envelope"></i>&nbsp;
+                        myemail@gmail.com
+                </p>
+
+            </div>
+            
+        </div>
+        <div>
+            <ul class="horizontal-list text-center social-icons">
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" title="Faceboook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.quora.com/" target="_blank" title="Quora">
+                        <i class="fab fa-quora"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

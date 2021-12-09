@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/gif" href="360.png">
+    <title>Search Result</title>
+    <link rel="stylesheet" type="text/css" href="output-ejs.css">
+    <style type="text/css">
+        #abc{
+    width: 100%;
+    height: auto;
+    background-color: #424040;
+    color: white;
+    margin: -20px -25px;
+    font-size: 25px;
+    background-image: url(../public/dark-background.jpg);
+}
+    </style>
+</head>
+
+<body>
+    <center>
+
+    <div id="abc">
+    <%for (let i=0;i<out.length;i++) { %>
+        <br>
+<p><b> <%= out[i].name %></p>
+<p> <%= out[i].address%></p>
+<p>Distance from your location:</b>  <%= out[i].Distance%> meters</p>
+<div style="width: 100%"><iframe width="50%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=50%25&amp;height=100&amp;hl=en&amp;q=<%= out[i].location.coordinates[0]%>,%20<%= out[i].location.coordinates[1]%>&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">gps</a></iframe></div>
+<br><br><br>
+<%}%>
+    </div>
+    </center>
+
+</body>
+
+</html>

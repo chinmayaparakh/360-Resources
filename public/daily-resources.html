@@ -1,0 +1,154 @@
+<html>
+
+    <head>
+        <link rel="icon" type="image/gif" href="360.png">
+        <link rel="stylesheet" type="text/css" href="class_resource_template.css">
+        <script src="https://kit.fontawesome.com/3dfb1555b6.js" crossorigin="anonymous"></script>
+
+        <title>360 Resources</title>
+    </head>
+
+
+    <body>
+        
+        <header id="body-header">
+            <nav>
+
+                <ul class="horizontal-list text-center nav-menu">
+                    <li>
+                        <a href="front_page.html"> Home </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#about"> About </a>
+                    </li> -->
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                    <!-- <li>
+                        <a href="signin.html"> Log In</a>
+                    </li>
+                    <li>
+                        <a href="signup.html"> Sign Up</a>
+                    </li> -->
+                </ul>
+                <!-- Login and Sign Up buttons -->
+                <!-- <button id="login"><a href="#"> Log In</a> </button>
+                <button id="signup"><a href="#"> Sign Up</a> </button> -->
+
+            </nav>
+
+
+            <div id="name-social-container">
+                <div class="text-center">
+                    <a href="front_page.html"><h1 id="my-name">360 Resources</h1></a>
+                    <h2 id="subtext">Find videos, notes, links and more! </h2>
+                </div>
+                <div>
+                    <ul class="horizontal-list text-center social-icons">
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" title="Faceboook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.quora.com/" target="_blank" title="Quora">
+                                <i class="fab fa-quora"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Daily Resources -->
+        <section id="daily-resources">
+            <center>Enter radius in kilometers:</center>
+            <center><input type="number" name="radius" min="1" max="20"></center>
+            <div>
+                <center>
+                    <button type="button">Restaurants</button>
+                    <button type="button">Malls</button>
+                    <button type="button">Cinemas</button>
+                </center>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Contact Section -->
+        <section id="contact">
+            
+			<h1 class="section-heading text-center">
+            	<i class="far fa-address-card"></i>
+            	Contact
+            </h1>
+            
+            <div id="cont-div">
+                
+                <div id="div-with-form">
+                    <form action="/suggest" method="POST">
+                        <input type="text" id="form-name" placeholder="Your name">
+                        <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+                        <textarea name="message" id="message" placeholder="Suggestion"></textarea>
+                        <input type="submit" value="SEND MESSAGE" id="submit"/>
+                    </form>
+                </div>
+                
+                <div id="contact-info">
+                    <h6>Get in touch</h6>
+                    <p>
+                        We, at 360 resources, are determined to provide the best service possible and you can help us achieve our goal. Your suggestions/feedback will help us improve our services. So help us get better by providing feedback by filling the form below.
+                    </p>
+
+                    <h6>Our Address</h6>
+                    <p>
+                        <a href="https://www.google.com/maps/place/JAYPEE+INSTITUTE+OF+INFORMATION+TECHNOLOGY/@28.6297291,77.3698669,17z/data=!3m1!4b1!4m5!3m4!1s0x390ce551491b3ce7:0x7335d9fcfd4d9db0!8m2!3d28.6297291!4d77.3720556" target="_blank" title="JIIT Noida">
+                            <i class="fas fa-map-marker-alt"></i>&nbsp;
+                            Noida, India <br><br>
+                        </a>
+                        <!-- <i class="fas fa-map-marker-alt"></i> 
+                            Delhi, India <br><br> -->
+                        <!-- <i class="fas fa-mobile-alt"></i>&nbsp;
+                            9999999999 <br><br> -->
+                        <i class="far fa-envelope"></i>&nbsp;
+                            myemail@gmail.com
+                    </p>
+
+                </div>
+                
+            </div>
+            <div>
+                <ul class="horizontal-list text-center social-icons">
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" title="Faceboook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.quora.com/" target="_blank" title="Quora">
+                            <i class="fab fa-quora"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+    </body>
+</html>

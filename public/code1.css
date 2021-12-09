@@ -1,0 +1,98 @@
+.nameheader{
+	height: 20%;
+	width: 100%;
+	display: flex;
+}
+
+#Websitename{
+	width: 70%;
+	font-size: 50px;
+	padding-left: 50%;
+
+
+}
+.main{
+	display: flex;
+	height: 400px;
+	width: 100%;
+	background-color: lightblue;
+	font-size: 50px;
+
+}
+
+.main div{
+	height: 100%;
+	width: 40%;
+	
+}
+
+
+.left{
+	display: inline;
+	margin-left: 5%;
+	margin-right: 10%;
+	background: yellow;
+}
+
+
+
+.left .lefthid{
+	display: inline;
+	visibility: hidden;
+	width: 120px;
+  
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1
+}
+.left:hover .lefthid{
+
+	visibility: visible;
+	display: inline;
+	background-color: purple;
+	width: 500px;
+	
+	font-size: 20px;
+
+}
+.right{
+
+	display: inline;
+	margin-right: 5%;
+	background: orange;
+	
+}
+.right .righthid{
+	display: inline;
+	visibility: hidden;
+	width: 120px;
+  
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1
+}
+.right:hover .righthid{
+
+	visibility: visible;
+	display: inline;
+	background-color: purple;
+	width: 500px;
+	
+	font-size: 20px;
+
+}
+
+.end{
+	font-size: 20px;
+	align-content: flex-end;
+}
